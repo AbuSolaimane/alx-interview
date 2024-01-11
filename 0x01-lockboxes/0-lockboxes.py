@@ -48,12 +48,3 @@ def canUnlockAll(boxes):
             return False
 
     return len(aux) == len(boxes)
-
-
-def main():
-    """the main entry"""
-    canUnlockAll([[]])
-
-
-if __name__ == '__main__':
-    main()
