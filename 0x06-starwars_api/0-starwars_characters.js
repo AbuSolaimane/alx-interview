@@ -1,17 +1,14 @@
 #!/usr/bin/node
-//add acomment
 const util = require('util');
 const request = util.promisify(require('request'));
 const filmID = process.argv[2];
 
-//add comm
 async function starwarsCharacters (filmId) {
   const endpoint = 'https://swapi-api.hbtn.io/api/films/' + filmId;
   let response = await (await request(endpoint)).body;
   response = JSON.parse(response);
   const characters = response.characters;
 
-  //comment
   for (let i = 0; i < characters.length; i++) {
     const urlCharacter = characters[i];
     let character = await (await request(urlCharacter)).body;
