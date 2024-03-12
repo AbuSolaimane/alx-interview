@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """ Module """
 
+
 def isWinner(x, nums):
     """function"""
     if not nums or x < 1:
